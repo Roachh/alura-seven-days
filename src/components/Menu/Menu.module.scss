@@ -1,0 +1,30 @@
+@import "styles/variables";
+
+.header {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lista {
+    display: flex;
+    list-style-type: none;
+}
+
+.lista li a {
+    color: $dark;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.lista li a:hover {
+    color: $white;
+}
+
+.lista li:not(:last-child):after {
+    content: ' / ';
+    margin: 0 5px;
+}
+
+.logo {
+    margin-right: auto;
+}

@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8F8F8;
+  background: url("assets/background.svg") no-repeat right top;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 25px;
+  text-align: center;
+
+}
+
+main {
+  height: 100vh;
+}

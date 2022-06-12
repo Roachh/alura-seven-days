@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    margin: 0 auto;
+}
+
+.image {
+    width: 60%;
+}
+
+.lista {
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista li::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $yellow;
+    display: inline-block;
+}
+
+.text-container {
+    width: 40%;
+    padding: 50px 15px 30px 15px;
+}
