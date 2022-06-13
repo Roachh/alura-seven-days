@@ -28,3 +28,33 @@
 .logo {
     margin-right: auto;
 }
+
+@media (max-width: 1200px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        background-color: $yellow;
+        margin-top: 0;
+        padding-top: 15px;
+
+        .logo {
+            margin-right: 0;
+        }
+
+        ul {
+            flex-direction: column;
+        }
+
+        .lista {
+            li {
+                margin: 10px 0;
+                font-size: 20px;
+
+                &:not(:last-child):after {
+                    content: '';
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

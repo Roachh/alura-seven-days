@@ -1,0 +1,125 @@
+@import 'styles/variables';
+
+.small {
+    color: $dark;
+    opacity: 0.5;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.big {
+    font-size: 82px;
+    font-weight: bold;
+    font-family: 'Elsie Swash Caps', cursive;
+}
+
+.ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+
+    .oferta {
+        width: 31%;
+        display: flex;
+        margin: 2% 0;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+        transition: 0.5s;
+        text-align: left;
+
+        &:nth-child(3n+1) {
+            margin-left: 0;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 50%;
+        }
+
+        .nome {
+            font-family: 'Elsie Swash Caps', cursive;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 37px;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            padding: 7% 3%;
+
+            a {
+                color: $yellow;
+                text-decoration: none;
+                margin-top: auto;
+                transition: .5s;
+
+                &:hover {
+                    color: darken($yellow, 20%);
+                    cursor: pointer;
+                }
+
+                .seta {
+                    margin-left: 5px;
+                }
+            }
+
+            .preco {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .ofertas {
+        .oferta {
+            width: 50%;
+        }
+    }
+
+}
+
+@media (max-width: 800px) {
+    .ofertas {
+        font-size: 30px;
+
+        .oferta {
+            width: 100%;
+
+            .nome {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .ofertas {
+        .oferta {
+            flex-wrap: wrap;
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+
+            .info {
+                width: 100%;
+
+                .preco {
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
+}

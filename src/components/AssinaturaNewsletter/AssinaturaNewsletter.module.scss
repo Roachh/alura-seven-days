@@ -1,7 +1,8 @@
 .container {
-    padding-top: 120px;
-    background: url('../../assets/bg-plant.png') top right no-repeat;
-    height: calc(100% - 50px);
+    background: url('../../assets/bg-plant.png') bottom right no-repeat;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
 }
 
 .content-container {
@@ -30,6 +31,7 @@ p {
 
 .small {
     opacity: 0.5;
+    font-size: 22px;
 }
 
 .big {
@@ -40,8 +42,35 @@ p {
     color: #202020;
 }
 
-.screen {
-    height: 100vh;
-    max-width: 100%;
-    padding-top: 20px;
+
+
+@media (max-width: 1200px) {
+
+
+    .container {
+        background: none;
+        padding-top: 30px;
+        height: auto;
+
+        .content-container {
+            margin: 0 auto;
+            width: 100%;
+            padding: 25px;
+
+            .title,
+            p {
+                text-align: center;
+            }
+
+            p {
+                margin: 25px auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .big {
+        font-size: 60px;
+    }
 }

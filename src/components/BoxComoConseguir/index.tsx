@@ -7,11 +7,11 @@ export default function boxComoConseguir() {
 		<div className={styles.container}>
 			<img className={styles.image} src={planta} alt="Planta" />
 			<div className={styles['text-container']}>
-				<div><span className={styles.title}>Como conseguir <span className={styles.big}>minha planta</span></span></div>
+				<div className={styles.title}><span className={styles.small}>Como conseguir</span> <br /><span className={styles.big}>minha planta</span></div>
 				<ul className={styles.lista}>
-					<li>Escolha suas plantas</li>
-					<li>faça seu pedido</li>
-					<li>Aguarde na sua casa</li>
+					<li><span className={styles.item}>Escolha suas plantas</span></li>
+					<li><span className={styles.item}>faça seu pedido</span></li>
+					<li><span className={styles.item}>Aguarde na sua casa</span></li>
 				</ul>
 			</div>
 		</div>

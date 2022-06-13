@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&family=Josefin+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -5,17 +7,28 @@
 body {
   background-color: #F8F8F8;
   background: url("assets/background.svg") no-repeat right top;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  padding-top: 25px;
   text-align: center;
 
 }
 
 main {
   height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background: none
+  }
+
+  main {
+    height: auto;
+    margin-bottom: 50px;
+  }
 }
