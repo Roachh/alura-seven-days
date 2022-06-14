@@ -11,10 +11,10 @@ export default function Newsletter() {
 	const [email, setEmail] = useState<string>('');
 	const [isValid, setIsValid] = useState<boolean>(false);	
 
-	useEffect(() => {
-		setIsValid(emailValidation(email));	
-		if(isMounted.current && !isValid && inputEmail.current) inputEmail.current.className = styles.invalido;
-		else isMounted.current = true;
+	useEffect(() => {		
+		if(isMounted.current && !isValid && inputEmail.current)
+		{ inputEmail.current.className = styles.invalido;
+		} else isMounted.current = true;
 	}, [email]);
 	
 	function emailValidation(emailString: string){
@@ -43,7 +43,11 @@ export default function Newsletter() {
 		<form ref={form} onSubmit={sendEmail} className={styles.newsletter}>
 			<div className={styles['input-wrapper']}>
 				<Mail className={styles.mail} />
-				<input ref={inputEmail} className={isValid ? styles.valido : ''} name="user_email" type="email" placeholder='Insira seu e-mail' value={email} onChange={(event) => setEmail(event.target.value)} />
+				<input ref={inputEmail} className={isValid ? styles.valido : ''} name="user_email" type="email" placeholder='Insira seu e-mail' value={email} onChange={(event) => {
+					setEmail(event.target.value);
+					setIsValid(emailValidation(event.target.value));	
+				}
+				} />
 			</div>
 			<input type="submit" value="Assinar newsletter" onClick={() => isValid ? alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${email}`) : ''} />			
 		</form>
