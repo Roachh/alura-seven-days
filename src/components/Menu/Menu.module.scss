@@ -2,31 +2,39 @@
 
 .header {
     display: flex;
+    justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
 }
 
 .lista {
     display: flex;
     list-style-type: none;
-}
 
-.lista li a {
-    color: $dark;
-    text-decoration: none;
-    transition: 0.3s;
-}
+    li {
+        a {
+            text-decoration: none;
+            color: #0000;
+            background:
+                linear-gradient(90deg, #fff 50%, $dark 0) calc(100% - var(--_p, 0%))/200% 100%,
+                linear-gradient($green 0 0) 0% 100%/var(--_p, 0%) 100% no-repeat;
+            -webkit-background-clip: text, padding-box;
+            background-clip: text, padding-box;
+            transition: 0.5s;
 
-.lista li a:hover {
-    color: $white;
-}
+            &:hover {
+                --_p: 100%
+            }
+        }
 
-.lista li:not(:last-child):after {
-    content: ' / ';
-    margin: 0 5px;
-}
+        &:not(:last-child):after {
+            content: ' / ';
+            margin: 0 5px;
+        }
+    }
 
-.logo {
-    margin-right: auto;
+    .logo {
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 1200px) {

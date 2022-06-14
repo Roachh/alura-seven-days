@@ -23,8 +23,8 @@
         width: 31%;
         display: flex;
         margin: 2% 0;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-        transition: 0.5s;
+        box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.3);
+        transition: all 300ms ease-in-out;
         text-align: left;
 
         &:nth-child(3n+1) {
@@ -36,7 +36,7 @@
         }
 
         &:hover {
-            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
         }
 
         img {
@@ -61,15 +61,24 @@
                 color: $yellow;
                 text-decoration: none;
                 margin-top: auto;
-                transition: .5s;
+                transition: .3s;
+                position: relative;
 
                 &:hover {
                     color: darken($yellow, 20%);
                     cursor: pointer;
+
+                    .seta {
+                        transform: translate(15px, -50%);
+                    }
                 }
 
                 .seta {
-                    margin-left: 5px;
+                    margin-left: 10px;
+                    transition: .5s;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
             }
 

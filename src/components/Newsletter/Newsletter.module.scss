@@ -1,56 +1,64 @@
 @import "styles/variables";
 
 .newsletter {
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: all 300ms ease-in-out;
     font-size: 16px;
+
+    &:hover {
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    input[type=email] {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding-left: 60px;
+        opacity: 0.5;
+        position: relative;
+    }
+
+    .input-wrapper {
+        height: 75px;
+        width: 70%;
+        display: inline-block;
+        position: relative;
+    }
+
+    .mail {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        z-index: 999;
+    }
+
+    input[type=submit] {
+        height: 75px;
+        width: 30%;
+        background-color: $yellow;
+        color: $white;
+        border: 0;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: darken($yellow, 20%);
+            cursor: pointer;
+        }
+    }
+
+    .valido {
+        outline: green solid 1px;
+    }
+
+    .invalido {
+        outline: red solid 1px;
+    }
 }
 
-input[type=email] {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding-left: 60px;
-    opacity: 0.5;
-    position: relative;
-}
 
-.input-wrapper {
-    height: 75px;
-    width: 70%;
-    display: inline-block;
-    position: relative;
-}
-
-.mail {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-}
-
-input[type=button] {
-    height: 75px;
-    width: 30%;
-    background-color: $yellow;
-    color: $white;
-    border: 0;
-    transition: 0.5s;
-}
-
-input[type=button]:hover {
-    background-color: darken($yellow, 20%);
-    cursor: pointer;
-}
-
-.valido {
-    outline: green solid 1px;
-}
-
-.invalido {
-    outline: red solid 1px;
-}
 
 @media (max-width: 1200px) {
     .newsletter {
@@ -60,7 +68,7 @@ input[type=button]:hover {
             width: 100%;
         }
 
-        input[type=button] {
+        input[type=submit] {
             width: 100%;
         }
     }
