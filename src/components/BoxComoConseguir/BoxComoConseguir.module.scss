@@ -75,15 +75,17 @@
 }
 
 @media (max-width: 1200px) {
-    .image {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-    }
+    .container {
+        .image {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    .text-container {
-        width: 100%;
-        align-items: center;
-        text-align: center;
+        .text-container {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
     }
 }

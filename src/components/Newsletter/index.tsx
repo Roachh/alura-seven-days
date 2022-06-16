@@ -15,9 +15,13 @@ export default function Newsletter() {
 		if(isMounted.current && !isValid && inputEmail.current)
 		{ inputEmail.current.className = styles.invalido;
 		} else isMounted.current = true;
+
+		if(inputEmail.current && email === '') {
+			inputEmail.current.className = '';
+		}
 	}, [email]);
 	
-	function emailValidation(emailString: string){
+	function emailValidation(emailString: string) {
 		const regex = new RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
 		if(!emailString || regex.test(emailString) === false){
 			return false;
@@ -25,11 +29,35 @@ export default function Newsletter() {
 		return true;
 	}
 
+	// MailerLite
+
+	// function sendEmail(e: FormEvent<HTMLFormElement>): void {
+	// 	e.preventDefault();
+	// 	const options: RequestInit = {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			Accept: 'application/json',
+	// 			'X-MailerLite-ApiDocs': 'true',
+	// 			'Content-Type': 'application/json',
+	// 			'X-MailerLite-ApiKey': process.env.REACT_APP_MAILERLITE_API_KEY
+	// 		} as HeadersInit,
+	// 		body: JSON.stringify({email: email, resubscribe: false, type: 'active'})
+	// 	};
+
+	// 	fetch('https://api.mailerlite.com/api/v2/subscribers', options)
+	// 		.then(response => response.json())
+	// 		.then(response => console.log(response))
+	// 		.catch(err => console.error(err));
+	// }
+
+
+	// EmailJS
+
 	function sendEmail(e: FormEvent<HTMLFormElement>): void {
 		e.preventDefault();
 
 		if (form.current !== undefined && form.current) {			
-			emailjs.sendForm('service_oau6pya', 'template_un2ksfx', form.current, process.env.REACT_APP_PUBLIC_KEY)
+			emailjs.sendForm('service_oau6pya', 'template_un2ksfx', form.current, process.env.REACT_APP_KEY)
 				.then((result) => {
 					console.log(result.text);
 				}, (error) => {

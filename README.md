@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Casa Verde
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://casa-verde.netlify.app/
 
-## Available Scripts
+Projeto Desenvolvido para o desafio #7DaysOfCode da Alura a partir do design do figma: https://www.figma.com/file/0yOQR6fGtbdrmqeStiO0jf/7Days-React
 
-In the project directory, you can run:
+Status: Em desenvolvimento
 
-### `npm start`
+<hr />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## O que foi Desenvolvido
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* ✔ Homepage (Seção principal, seção Como Conseguir e seção de ofertas).
+* ✔ Newsletter com validação de e-mail.
+* ✔ Puxar dados de arquivo JSON na seção de ofertas.
+* ✔ Mobile.
+* ✔ Envio de e-mail com a biblioteca EmailJS.
+* ✔ Ordenação de ofertas por preço ou nome.
+* ✔ filtro por intervalo de preço
+* ✔ Animação de hover nos links menu, input da newsletter e links de comprar nas ofertas.
 
-### `npm test`
+## A desenvolver
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* ✔ API de ofertas de plantas.
+* ✔ Animação de unmount de ofertas ao ser filtrado.
+* ✔ Acessibilidade.
+* ✔ Integração com serviço de e-mail marketing como Mailerlite ou outro.
+* ✔ Fonte dinâmica com base na largura do display
 
-### `npm run build`
+<hr />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologias Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* React
+* Typescript
+* Sass
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Bibliotecas
 
-### `npm run eject`
+* EmailJS
+* Normalize.css
+* Material UI
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<hr />
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Cloning the Repository**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+$ git clone https://github.com/Roachh/alura-seven-days
 
-## Learn More
+$ cd alura-seven-days
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Installing dependencies**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ yarn
+```
+
+_or_
+
+```
+$ npm install
+```
