@@ -57,7 +57,7 @@ export default function Newsletter() {
 		e.preventDefault();
 
 		if (form.current !== undefined && form.current) {			
-			emailjs.sendForm('service_oau6pya', 'template_un2ksfx', form.current, process.env.REACT_APP_KEY)
+			emailjs.sendForm('service_oau6pya', 'template_un2ksfx', form.current, 'UIqjmScM2qIkx0Iv0')
 				.then((result) => {
 					console.log(result.text);
 				}, (error) => {
