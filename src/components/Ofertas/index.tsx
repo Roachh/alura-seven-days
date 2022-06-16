@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Ofertas.module.scss';
-import produtos from 'data/produtos.json';
+// import produtos from 'data/produtos.json';
 import { ReactComponent as Seta } from 'assets/seta.svg';
 import ControllerLista from 'components/ControllerLista';
 import { IOferta } from './../../interfaces/IOferta';

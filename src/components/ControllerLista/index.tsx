@@ -1,7 +1,6 @@
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 import React, { useEffect } from 'react';
 import styles from './ControllerLista.module.scss';
-import { IOferta } from 'interfaces/IOferta';
 import MinimumDistanceSlider from 'components/MinimumDistanceSlider';
 
 export default function ControllerLista({ setOrdenacao, setFiltro }: 
